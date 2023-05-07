@@ -27,5 +27,3 @@ if($tabuada !== null){
 }
 separa_dow();
    }
-
-?>

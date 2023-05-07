@@ -23,6 +23,3 @@
     }else{
         echo "Seu numero é zero ! ";
     }
-   
-
-?>
