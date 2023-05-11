@@ -1,19 +1,36 @@
 <?php
+$numero = "";
+$fatorial = "";
 
-/*           Fatorial
-3) Crie um algoritmo que solicite um número, e faça o cálculo fatorial do mesmo,
- exiba o resultado na tela. Ex: Entrada = 3 Processamento: (3 * 2) * 1 Saída: 6 */
-
-echo "          Calculo Fatorial   \n";
-echo " Digite um numero para descobrirmos o fatorial do mesmo \n";
-
-$numero = readline(" Aqui coloque o numero :  ") ; 
-
-$fatorial = 1;
-for ($i = 1; $i <= $numero; $i++) {
-    $fatorial *= $i;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $numero = $_POST["numero"];
+    $fatorial = calcularFatorial($numero);
 }
 
-echo " O fatorial de " . $numero . " é: ".$fatorial;
-
+function calcularFatorial($numero) {
+    $fatorial = 1;
+    for ($i = 1; $i <= $numero; $i++) {
+        $fatorial *= $i;
+    }
+    return $fatorial;
+}
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculo Fatorial</title>
+</head>
+<body>
+    <h2>Calculo Fatorial</h2>
+    <form action="" method="post">
+        <label for="numero">Digite um número para calcular o fatorial:</label>
+        <input type="number" name="numero" id="numero" value="<?php echo $numero; ?>">
+        <input type="submit" value="Calcular">
+    </form>
+
+    <?php if ($fatorial !== ""): ?>
+        <p>O fatorial de <?php echo $numero; ?> é: <?php echo $fatorial; ?></p>
+    <?php endif; ?>
+</body>
+</html>
