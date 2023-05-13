@@ -1,3 +1,4 @@
+#Docker Erasmo
 # Imagem base do PHP com Apache
 FROM php:8.0-apache
 
