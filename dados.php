@@ -1,7 +1,7 @@
 <?php 
     // Conecta ao banco de dados 
 
-    $dadof = 'dados.db';
+    $dadof = './dados/dados.db';
 
     if(!file_exists($dadof)){
     try {
