@@ -6,7 +6,7 @@
     if(!file_exists($dadof)){
     try {
         $dados = new PDO("sqlite:$dadof");
-        $dados->exec("CREATE TABLE IF NOT EXISTS exemplo (id INTEGER PRIMARY KEY, nome TEXT)");
+        $dados->exec("CREATE TABLE IF NOT EXISTS dados (id INTEGER PRIMARY KEY, nome TEXT, telefone INT, email TEXT)");
         $dados->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
         echo "Banco criado";
     }catch (PDOException $erro){
@@ -20,7 +20,7 @@
         }catch(PDOException $erro){
             die("Erro ao conectar ao banco de dados !!" . $erro->getMessage());  
 
-
+            
         }}
 
 
