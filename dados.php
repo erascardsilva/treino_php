@@ -1,8 +1,11 @@
 <?php 
-    // Conecta ao banco de dados 
-
-    $dadof = './dados/dados.db';
-
+    /*   Conexão dados Erasmo
+     Conecta ao banco de dados 
+     Expecifica caminho do arquivo sql */
+    
+     $dadof = './dados/dados.db';
+    
+    //Condição de existencia se não cria se sim conecta
     if(!file_exists($dadof)){
     try {
         $dados = new PDO("sqlite:$dadof");
