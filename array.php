@@ -16,10 +16,10 @@ $message = array(
 print
     "------------------------------------\n";
 print
-    $message["position_one"] . "\n";
+    $message["position_one"] ."\n";
 
 print
-    $message["position_two"] . "\n";
+    $message["position_two"] ."\n";
 
 print
     "------------------------------------\n";
